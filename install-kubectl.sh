@@ -1,6 +1,6 @@
-curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+LATEST=$(curl -L -s https://dl.k8s.io/release/stable.txt)
+curl -LO "https://dl.k8s.io/release/${LATEST}/bin/linux/amd64/kubectl"
+curl -LO "https://dl.k8s.io/release/${LATEST}/bin/linux/amd64/kubectl.sha256"
 echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
-#검증에 성공하면 다음과 같이 출력 
-kubectl: OK
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
