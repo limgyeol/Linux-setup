@@ -1,2 +1,2 @@
-sudo dnf update -y
-sudo dnf install -y ruby
+dnf update -y
+dnf install -y ruby
