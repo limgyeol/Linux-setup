@@ -14,4 +14,4 @@ curl -LO "https://dl.k8s.io/release/${LATEST})/bin/linux/arm64/kubectl"
 curl -LO "https://dl.k8s.io/release/${LATEST}/bin/linux/arm64/kubectl.sha256"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 chmod +x kubectl
-mv kubectl /usr/local/bin/
+mv ./kubectl ~/.local/bin/kubectl
