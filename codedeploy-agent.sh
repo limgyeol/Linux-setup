@@ -5,12 +5,12 @@ chmod +x ./install
 systemctl start codedeploy-agent
 systemctl enable codedeploy-agent
 
-sudo yum update -y
-sudo yum install ruby -y
-sudo yum install wget -y
+dnf update -y
+dnf install ruby wget -y
 cd /home/ec2-user
+# 서울 리전 기준 설치 파일 다운로드
 wget https://aws-codedeploy-ap-northeast-2.s3.ap-northeast-2.amazonaws.com/latest/install
 chmod +x ./install
-sudo ./install auto
-# 서비스 상태 확인
-sudo service codedeploy-agent status
+./install auto
+# 상태 확인 (active/running이 떠야 함)
+service codedeploy-agent status
