@@ -1,4 +1,4 @@
-#amd64
+#x86(amd64)
 LATEST=$(curl -L -s https://dl.k8s.io/release/stable.txt)
 curl -LO "https://dl.k8s.io/release/${LATEST}/bin/linux/amd64/kubectl"
 curl -LO "https://dl.k8s.io/release/${LATEST}/bin/linux/amd64/kubectl.sha256"

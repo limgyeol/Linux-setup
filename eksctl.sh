@@ -1,4 +1,4 @@
-ARCH=amd64
+ARCH=x86
 PLATFORM=$(uname -s)_$ARCH
 curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
 curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt"| grep $PLATFORM | sha256sum --check
